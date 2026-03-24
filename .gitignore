@@ -1,0 +1,110 @@
+# Build output
+/bin/
+/obj/
+/publish/
+/out/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+/x64/
+/x86/
+/build/
+/bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+*.suo
+*.user
+*.userprefs
+*.lock.json
+*.deps.json
+*.pidb
+*.sln.ide
+*.ide/
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.ldb
+
+# Logs
+*.log
+logs/
+log.txt
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package Manager
+packages/
+*.nupkg
+*.snupkg
+
+# Testing
+/TestResults/
+*.trx
+*.coverage
+*.coverage.xml
+
+# Publish
+/publish/
+/*.pubxml
+
+# Docker
+.dockerignore
+docker-compose*.yml
+!docker-compose.override.yml
+
+# Node (nếu có frontend trong wwwroot)
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Railway specific
+.railway/
+railway-*.json
+
+# Azure specific
+/Properties/ServiceDependencies/
+/Properties/PublishProfiles/
