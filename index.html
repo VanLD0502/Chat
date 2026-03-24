@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatRoom - Phòng Chat Vui Vẻ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Màn hình chọn avatar và tham gia -->
+    <div id="joinScreen" class="join-screen">
+        <div class="join-container">
+            <h1 class="title">🎉 CHATROOM VUI VẺ 🎉</h1>
+            <p class="subtitle">Chọn avatar và tham gia chat ngay!</p>
+
+            <!-- Chọn avatar -->
+            <div class="avatar-selection">
+                <h3>Chọn avatar của bạn:</h3>
+                <div class="avatars" id="avatars">
+                    <!-- Avatars sẽ được tạo bằng JS -->
+                </div>
+            </div>
+
+            <!-- Nhập tên -->
+            <div class="input-group">
+                <label>Tên hiển thị:</label>
+                <input type="text" id="userName" placeholder="Nhập tên của bạn..." maxlength="30">
+            </div>
+
+            <!-- Tạo phòng hoặc tham gia -->
+            <div class="room-actions">
+                <div class="create-room">
+                    <button id="createRoomBtn" class="btn btn-primary">✨ Tạo Phòng Mới</button>
+                </div>
+                <div class="divider">HOẶC</div>
+                <div class="join-room">
+                    <input type="text" id="joinRoomId" placeholder="Nhập mã phòng">
+                    <button id="joinRoomBtn" class="btn btn-secondary">🔗 Tham Gia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Màn hình chat -->
+    <div id="chatScreen" class="chat-screen" style="display: none;">
+        <div class="chat-container">
+            <!-- Sidebar: Danh sách thành viên -->
+            <div class="sidebar">
+                <div class="room-info">
+                    <h2>💬 Phòng: <span id="roomIdDisplay"></span></h2>
+                    <button id="leaveRoomBtn" class="btn-leave">🚪 Rời phòng</button>
+                </div>
+                <div class="members-list">
+                    <h3>👥 Thành viên (<span id="memberCount">0</span>)</h3>
+                    <div id="membersContainer" class="members"></div>
+                </div>
+            </div>
+
+            <!-- Main chat area -->
+            <div class="chat-main">
+                <div class="chat-header">
+                    <h2>💬 Trò chuyện</h2>
+                </div>
+                <div id="messagesContainer" class="messages"></div>
+                <div class="message-input">
+                    <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." maxlength="500">
+                    <button id="sendBtn" class="btn-send">📤 Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
